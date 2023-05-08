@@ -1,0 +1,36 @@
+.send-block {
+    color: #00CED1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    font-size: 18px;
+}
+
+.send-input {
+    display: block;
+    margin: 5px 0;
+    padding: 4px;
+    background-color: #53565B;
+    color: #00CED1;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 250px;
+}
+
+.send-button {
+    display: block;
+    margin: 3px 0;
+    padding: 6px;
+    background-color: #53565B;
+    color: #00CED1;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 250px;
+}
+
+.send-button:hover {
+    background-color: #b4eded;
+}

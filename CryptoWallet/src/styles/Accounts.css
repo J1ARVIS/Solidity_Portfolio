@@ -1,0 +1,120 @@
+.accounts-block {
+    color: #00CED1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    font-size: 18px;
+}
+
+.current-address {
+    margin-bottom: 10px;
+}
+
+.current-address span {
+    margin-right: 15px;
+}
+
+.copy-button {
+    padding: 4.5px 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #53565B;
+    color: #00CED1;
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    background-color: #b4eded;
+}
+
+.accounts-choices {
+    display: flex;
+    align-items: center;
+}
+
+.accounts-choices span {
+    margin-right: 35px;
+}
+
+.account-selector {
+    padding: 4px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #53565B;
+    color: #00CED1;
+    cursor: pointer;
+}
+
+.account-selector:focus {
+    box-shadow: 0 0 2px 1px #00CED1;
+}
+
+.account-selector option {
+    font-size: 14px;
+    color: #00CED1;
+    background-color: #53565B;
+}
+
+.getAddress-button {
+    margin: 0px 20px;
+    padding: 5px 11px;
+    border: none;
+    border-radius: 8px;
+    background-color: #53565B;
+    color: #00CED1;
+    cursor: pointer;
+}
+
+.getAddress-button:hover {
+    background-color: #b4eded;
+}
+
+.generate-button {
+    font-size: 15px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #53565B;
+    color: #00CED1;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.generate-button:hover {
+    background-color: #b4eded;
+}
+
+.import-label {
+    display: block;
+    margin-top: 15px;
+}
+
+.import-input {
+    margin: 0px 10px;
+    margin-bottom: -15px;
+    padding: 4px;
+    background-color: #53565B;
+    color: #00CED1;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 75%;
+    min-height: 40px;
+    overflow-y: hidden;
+    resize: none;
+}
+
+.import-button {
+    font-size: 15px;
+    padding: 5px 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: #53565B;
+    color: #00CED1;
+    cursor: pointer;
+}
+
+.import-button:hover {
+    background-color: #b4eded;
+}

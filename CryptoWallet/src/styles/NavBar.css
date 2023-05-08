@@ -1,0 +1,40 @@
+.navigation {
+    background-color: #53565B;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.navigation ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    margin-right: 20px;
+}
+
+.navigation li:last-child {
+    margin-right: 0;
+}
+
+.navigation a {
+    color: #20B2AA;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.navigation a:hover {
+    background-color: #b4eded;
+}
+
+.navigation li.active a {
+    background-color: #5F9EA0;
+    color: #00FFFF;
+}

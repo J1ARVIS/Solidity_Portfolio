@@ -1,0 +1,17 @@
+Error:
+"Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'call')
+    at Hmac.CipherBase (index.js:7:1)
+    at new Hmac (browser.js:14:1)
+    at createHmac (browser.js:61:1)
+    at Object.hmacSHA512 (crypto.js:22:1)
+    at Object.fromSeed (bip32.js:292:1)
+    at providePrivateKey (ETH.js:16:1)
+    at async provideAddress (ETH.js:7:1)
+    at async getAddress (CredentialService.js:13:1)
+    at async handleGenerateAddress (App.js:96:1)
+"
+
+Solution:
+    follow \node_modules\cipher-base\index,js
+    replace "var Transform = require('stream').Transform"
+    with "var Transform = require('readable-stream').Transform"
