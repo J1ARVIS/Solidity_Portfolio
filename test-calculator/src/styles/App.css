@@ -1,0 +1,21 @@
+body {
+  background-image: url('../images/background.webp');
+  font-family: 'Encode Sans', sans-serif;
+}
+
+.box {
+  width: 50%;
+  height: 80%;
+  border: 2px solid #40E0D0;
+  background-color: #0c1313eb;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hr {
+  border: none;
+  border-top: 2px solid #00CED1;
+  margin: 1em 3%;
+}
