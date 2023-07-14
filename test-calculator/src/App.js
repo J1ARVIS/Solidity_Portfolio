@@ -7,6 +7,14 @@ import './styles/App.css';
 import './styles/Wallet.css';
 import './styles/Calculator.css';
 
+import {
+  checkUintInputExceeded,
+  checkUintInputPositive,
+  checkUintResultExceeded,
+  checkUintResultPositive,
+  checkUintResultInteger,
+} from './helpers/validateUint256';
+
 function App() {
   const web3 = new Web3(window.ethereum);
 
@@ -106,24 +114,45 @@ function App() {
         alert("Please fill in both number fields");
         return;
       }
+      if (!checkUintInputExceeded(numberA, numberB) || !checkUintInputPositive(numberA, numberB)) {
+        setNumberA(0);
+        setNumberB(0);
+        return;
+      }
 
       let hashTX;
       let calculatedResult;
       try {
         switch (selectedOperation) {
           case '+':
+            if (!checkUintResultExceeded(numberA, numberB, "add")) {
+              setNumberA(0);
+              setNumberB(0);
+              return;
+            }
             const addEvent = await calculatorcontract.methods.add(numberA, numberB).send({ from: connectedAddress, gas: 3000000 });
             hashTX = addEvent.transactionHash;
             break;
           case '-':
+            if (!checkUintResultPositive(numberA, numberB)) {
+              setNumberA(0);
+              setNumberB(0);
+              return;
+            }
             const subtractEvent = await calculatorcontract.methods.subtract(numberA, numberB).send({ from: connectedAddress, gas: 3000000 });
             hashTX = subtractEvent.transactionHash;
             break;
           case '*':
+            if (!checkUintResultExceeded(numberA, numberB, "multiply")) {
+              setNumberA(0);
+              setNumberB(0);
+              return;
+            }
             const multiplyEvent = await calculatorcontract.methods.multiply(numberA, numberB).send({ from: connectedAddress, gas: 3000000 });
             hashTX = multiplyEvent.transactionHash;
             break;
           case '/':
+            checkUintResultInteger(numberA, numberB);
             const divideEvent = await calculatorcontract.methods.divide(numberA, numberB).send({ from: connectedAddress, gas: 3000000 });
             hashTX = divideEvent.transactionHash;
             break;
