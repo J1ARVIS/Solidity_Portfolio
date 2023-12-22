@@ -1,0 +1,42 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "D:\\JS code\\VNTU\\Master's thesis 'Secure Voting System'\\contracts\\Voting system.sol": {
+      "lastModificationDate": 1702155661469,
+      "contentHash": "c1731d950bc6ec03369827df538a4342",
+      "sourceName": "contracts/Voting system.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "Voting",
+        "VotingBuilder",
+        "VotingRoleModel"
+      ]
+    }
+  }
+}
